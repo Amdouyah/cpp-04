@@ -4,7 +4,7 @@ CC = c++
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp Dog.cpp Cat.cpp Animal.cpp
+SRC = main.cpp Dog.cpp Cat.cpp Animal.cpp WrongAnimal.cpp Wrongcat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
