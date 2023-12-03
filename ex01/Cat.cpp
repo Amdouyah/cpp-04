@@ -23,6 +23,7 @@ Cat &Cat::operator=(const Cat &copy){
 	return *this;
 }
 Cat::~Cat(){
+	delete this->brain;
 	std::cout << "Cat Destructor Called" << std::endl;
 }
 

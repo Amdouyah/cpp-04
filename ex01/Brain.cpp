@@ -7,7 +7,7 @@ Brain::Brain(){
 Brain &Brain::operator=(const Brain &copy){
 	for(int i = 0; i < 100; i++)
 		this->ideas[i] = copy.ideas[i];
-	this->count = copy->count;
+	this->count = copy.count;
 	std::cout << "copy assignment operator called" << std::endl;
 	return *this;
 }

@@ -23,6 +23,7 @@ Dog &Dog::operator =(const Dog &copy){
 	return *this;
 }
 Dog::~Dog(){
+	delete this->brain;
 	std::cout << "Dog Destructor Called" << std::endl;
 }
 
