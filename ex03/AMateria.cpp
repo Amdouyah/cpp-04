@@ -1,6 +1,6 @@
 #include "AMateria.hpp"
 
-AMateria::AMateria(){
+AMateria::AMateria(){ 
 }
 AMateria::~AMateria(){
 }
@@ -15,4 +15,7 @@ AMateria::AMateria(std::string const & type){
 }
 std::string const & AMateria::getType() const{
 	return type;
+}
+void AMateria::use(ICharacter& target){
+	std::cout << "default use" << std::endl;
 }
