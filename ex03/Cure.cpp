@@ -9,6 +9,6 @@ AMateria* Cure::clone()const{
 Cure::~Cure(){
 }
 
-// void Cure::use(ICharacter& target){
-// 	std::cout <<"Cure: * heals " << target.name << std::endl;
-// }
+void Cure::use(ICharacter& target){
+	std::cout <<"Cure: * heals " << target.getName() << std::endl;
+}
