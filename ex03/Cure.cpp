@@ -3,7 +3,7 @@
 Cure::Cure() : AMateria("ice"){
 
 }
-AMateria* Cure::clone()const{
+AMateria* Cure::clone() const{
 	return new Cure(*this);
 }
 Cure::~Cure(){

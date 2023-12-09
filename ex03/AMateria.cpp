@@ -6,6 +6,7 @@ AMateria::~AMateria(){
 }
 AMateria &AMateria::operator=(const AMateria &copy){
 	this->type = copy.type;
+	return *this;
 }
 AMateria::AMateria(const AMateria &copy){
 	*this = copy;
