@@ -8,7 +8,11 @@ AMateria* Cure::clone() const{
 }
 Cure::~Cure(){
 }
-
+Cure &Cure::operator=(const Cure & copy){
+	return *this;
+}
+Cure::Cure(const Cure & copy){
+}
 void Cure::use(ICharacter& target){
-	std::cout <<"Cure: * heals " << target.getName() << std::endl;
+	std::cout <<"* heals " << target.getName()<< "`s wounds *" << std::endl;
 }

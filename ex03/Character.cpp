@@ -7,8 +7,6 @@ Character::Character(){
 		tmp[i] = NULL;
 	}
 }
-Character::~Character(){
-}
 Character::Character(std::string const &name) : name(name){
 	for (int i = 0; i < 4 ; i++){
 		inventory[i] = NULL;
@@ -53,17 +51,21 @@ void Character::equip(AMateria *m){
 void Character::unequip(int idx){
 	if (inventory[idx]){
 		tmp[idx] = inventory[idx];
+		std::cout << tmp[idx]->getType() << std::endl;
 		inventory[idx] = NULL;
 	}
 }
 void Character::use(int idx, ICharacter& target){
-	if (idx <= index){
-		inventory[idx]->use(target);
+	if (idx >=0 && idx <= 3)
+	{
+		if (inventory[idx] != NULL){
+			inventory[idx]->use(target);
+		}
 	}
 }
 
 Character::~Character(){
 	for (int i = 0; i < 4; ++i){
-        delete inventory[i];
+		delete inventory[i];
     }
 }
