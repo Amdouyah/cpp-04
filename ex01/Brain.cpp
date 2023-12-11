@@ -11,12 +11,6 @@ Brain &Brain::operator=(const Brain &copy){
 	std::cout << "copy assignment operator called" << std::endl;
 	return *this;
 }
-void Brain::make(std::string std){
-	if (count < 100){
-		this->ideas[count] = std;
-		count++;
-	}
-}
 Brain::Brain(const Brain &copy){
 	*this = copy;
 	std::cout <<"Brain copy Constructor Called" << std::endl;

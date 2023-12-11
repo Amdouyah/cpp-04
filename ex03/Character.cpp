@@ -42,12 +42,23 @@ std::string	const &Character::getName()const{
 	return name;
 }
 void Character::equip(AMateria *m){
+	if (!m)
+		return ;
+	for (int i = 0; i < 4; i++) {
+		if (inventory[i] && (inventory[i]) == m) {
+			return;
+		}
+	}
 	if(index != 4){
 		inventory[index] = m;
 		index++;
 	}
+	
+	else {
+		delete m;
+		std::cout << "can`t equip\n";
+	}
 }
-
 void Character::unequip(int idx){
 	if (inventory[idx]){
 		tmp[idx] = inventory[idx];
@@ -63,7 +74,6 @@ void Character::use(int idx, ICharacter& target){
 		}
 	}
 }
-
 Character::~Character(){
 	for (int i = 0; i < 4; ++i){
 		delete inventory[i];
